@@ -1,0 +1,90 @@
+.cocinero-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+              url('https://st4.depositphotos.com/4459753/40338/i/1600/depositphotos_403386284-stock-photo-modern-kitchen-cooks-prepare-meals.jpg') center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.cocinero-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Grilla de pedidos */
+.pedidos-grid {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta individual de pedido */
+.pedido-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pedido-card h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 6px;
+}
+
+.pedido-card ul {
+  padding-left: 20px;
+  margin: 8px 0 15px 0;
+  color: #ddd;
+}
+
+.pedido-estado {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Botones de acción */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-aceptar, .btn-listo {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-aceptar {
+  background: rgba(255, 255, 255, 0.85);
+  color: #111;
+}
+
+.btn-listo {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-aceptar:hover, .btn-listo:hover {
+  opacity: 0.85;
+}

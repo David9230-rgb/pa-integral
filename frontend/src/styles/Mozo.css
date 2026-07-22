@@ -1,0 +1,147 @@
+/* Contenedor principal con fondo oscuro responsivo */
+.mozo-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+              url('https://image.slidesdocs.com/responsive-images/background/3d-rendering-tablet-pc-mockup-displaying-an-order-food-online-website-on-a-kitchen-cooking-island-powerpoint-background_21790e1553__960_540.jpg') center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Título principal */
+.mozo-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Tarjeta principal con efecto Glassmorphism */
+.mozo-card {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Secciones dentro de la tarjeta */
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0 10px 0;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 6px;
+}
+
+.section-title:first-of-type {
+  margin-top: 0;
+}
+
+/* Select de Mesa */
+.mozo-select {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background 0.3s;
+}
+
+.mozo-select option {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+
+.platos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.plato-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.plato-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.plato-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Resumen del Pedido */
+.resumen-box {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-top: 10px;
+}
+
+.resumen-box p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.resumen-box ul {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+  color: #ddd;
+}
+
+.resumen-box li {
+  margin-bottom: 4px;
+}
+
+/* Botón Enviar Pedido */
+.btn-enviar {
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}

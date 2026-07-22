@@ -1,0 +1,104 @@
+/* Contenedor principal con la misma imagen y fondo oscuro */
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+              url('https://framerusercontent.com/images/pUzTAvSTHVerARFRyPdHaSK7ceM.jpg?scale-down-to=1024&width=1408&height=768') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Barra de navegación superior idéntica */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  box-sizing: border-box;
+}
+
+
+/* Tarjeta del formulario centralizado */
+.form-card {
+  width: 100%;
+  max-width: 440px;
+  margin-top: 60px;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-header {
+  font-size: 14px;
+  color: #dddddd;
+  margin-bottom: 8px;
+}
+
+.sub-header a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.form-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs con acabado Glassmorphism */
+.input-field {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 15px;
+  outline: none;
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  transition: background 0.3s;
+}
+
+.input-field::placeholder {
+  color: #e0e0e0;
+}
+
+.input-field:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botón principal */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #ffffff;
+}
