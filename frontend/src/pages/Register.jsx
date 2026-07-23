@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import "../styles/Register.css"; // <-- Importa el archivo de estilos
+import "../styles/Register.css";
 
 function Register() {
   const [nombre, setNombre] = useState("");
@@ -15,7 +15,8 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post("[https://pa-integral-backend.onrender.com/api/usuarios/registro](https://pa-integral-backend.onrender.com/api/usuarios/registro)", {
+      // URL Limpia sin formato Markdown
+      await axios.post("https://pa-integral-backend.onrender.com/api/usuarios/registro", {
         nombre,
         usuario,
         password,
@@ -33,22 +34,16 @@ function Register() {
 
   return (
     <div className="register-container">
-      {/* Navbar Superior */}
       <nav className="navbar">
-
-       
         <div className="nav-buttons">
           <Link to="/" className="btn-nav">Sign In</Link>
-          
         </div>
       </nav>
 
-      {/* Formulario centralizado */}
       <div className="form-card">
         <p className="sub-header">
-          ya tienes una cuenta? <Link to="/">Login</Link>
+          ¿Ya tienes una cuenta? <Link to="/">Login</Link>
         </p>
-        
 
         <form onSubmit={registrarUsuario} className="register-form">
           <input

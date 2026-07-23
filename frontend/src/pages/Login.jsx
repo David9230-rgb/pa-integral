@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import "../styles/Login.css"; // Importamos los estilos coincidentes
+import "../styles/Login.css";
 
 function Login() {
   const [usuario, setUsuario] = useState("");
@@ -13,36 +13,36 @@ function Login() {
     e.preventDefault();
 
     try {
+      // URL Limpia sin formato Markdown
       const respuesta = await axios.post(
-        "[https://pa-integral-backend.onrender.com/api/usuarios/login](https://pa-integral-backend.onrender.com/api/usuarios/login)",
+        "https://pa-integral-backend.onrender.com/api/usuarios/login",
         {
           usuario,
           password
         }
       );
 
-      localStorage.setItem(
-        "token",
-        respuesta.data.token
-      );
+      // Guardar token y rol
+      localStorage.setItem("token", respuesta.data.token);
 
-      localStorage.setItem(
-        "rol",
-        respuesta.data.usuario.rol
-      );
+      if (respuesta.data.usuario && respuesta.data.usuario.rol) {
+        localStorage.setItem("rol", respuesta.data.usuario.rol);
 
-      if(respuesta.data.usuario.rol === "mozo"){
-        navigate("/mozo");
-      }else{
-        navigate("/cocinero");
+        if (respuesta.data.usuario.rol === "mozo") {
+          navigate("/mozo");
+        } else {
+          navigate("/cocinero");
+        }
+      } else {
+        alert("Respuesta del servidor incompleta. Intenta nuevamente.");
       }
 
-    } catch(error){
+    } catch (error) {
       console.log(error);
 
-      if(error.response){
+      if (error.response && error.response.data && error.response.data.mensaje) {
         alert(error.response.data.mensaje);
-      }else{
+      } else {
         alert("Error de conexión con el servidor");
       }
     }
@@ -50,17 +50,12 @@ function Login() {
 
   return (
     <div className="login-container">
-      {/* Navbar idéntica a Register */}
       <nav className="navbar">
-        
-       
         <div className="nav-buttons">
-    
           <Link to="/register" className="btn-nav">Sign Up</Link>
         </div>
       </nav>
 
-      {/* Tarjeta Glassmorphic */}
       <div className="form-card">
         <p className="sub-header">
           ¿No tienes una cuenta? <Link to="/register">Regístrate aquí</Link>
@@ -76,7 +71,7 @@ function Login() {
             className="input-field"
             placeholder="Usuario"
             value={usuario}
-            onChange={(e)=>setUsuario(e.target.value)}
+            onChange={(e) => setUsuario(e.target.value)}
           />
 
           <input
@@ -84,7 +79,7 @@ function Login() {
             className="input-field"
             placeholder="Contraseña"
             value={password}
-            onChange={(e)=>setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <button type="submit" className="btn-submit">
