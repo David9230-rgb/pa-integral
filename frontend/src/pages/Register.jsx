@@ -15,7 +15,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/usuarios/registro", {
+      await axios.post("[https://pa-integral-backend.onrender.com/api/usuarios/registro](https://pa-integral-backend.onrender.com/api/usuarios/registro)", {
         nombre,
         usuario,
         password,

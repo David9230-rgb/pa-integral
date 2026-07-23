@@ -10,7 +10,7 @@ function Cocinero(){
   const cargarPedidos=async()=>{
     const respuesta =
     await axios.get(
-      "http://localhost:5000/api/pedidos"
+      "[https://pa-integral-backend.onrender.com/api/pedidos](https://pa-integral-backend.onrender.com/api/pedidos)"
     );
 
     setPedidos(
@@ -40,7 +40,7 @@ function Cocinero(){
 
   const cambiarEstado=async(id,estado)=>{
     await axios.put(
-      `http://localhost:5000/api/pedidos/${id}`,
+     `[https://pa-integral-backend.onrender.com/api/pedidos/$](https://pa-integral-backend.onrender.com/api/pedidos/$){id}`,
       {
         estado
       }

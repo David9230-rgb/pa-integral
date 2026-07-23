@@ -34,7 +34,7 @@ function Mozo(){
   const enviarPedido = async()=>{
     try{
       const respuesta = await axios.post(
-        "http://localhost:5000/api/pedidos",
+       "[https://pa-integral-backend.onrender.com/api/pedidos](https://pa-integral-backend.onrender.com/api/pedidos)",
         {
           mesa,
           platos,
